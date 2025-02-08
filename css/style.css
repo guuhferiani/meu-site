@@ -1,0 +1,30 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #222; /* cor fundo */
+    color: #d2d2d2;  /* cor texto */
+}
+
+i {
+    color: aqua;
+    font-size: 20px; /* tamanho do texto */
+}
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #533535;
+    padding: 8px 16px;
+    z-index: 2;
+}
+
+.menu {
+
+}
