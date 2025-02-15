@@ -47,3 +47,53 @@ i {
     font-size: 20px;
     text-transform: uppercase;
 }
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 15px;
+
+}
+
+.menu-link.active .menu-icone,
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-icone,
+.menu-link:hover .menu-texto{
+    color: #f3f3f3;
+    font-weight: 800;
+}
+
+/* não selecionados */
+.menu-icone,
+.menu-texto{ 
+    color: #797979;
+    font-weight: 400;
+}
+
+/* .menu-link .menu-texto:hover,
+.menu-link .menu-icone:hover {
+    font-size: 22px;
+} */
+
+.menu-icone {
+    font-size: 25px;
+}
+
+.menu-principal {
+    gap: 20px;
+}
+
+.header-nav {
+    display: none;
+}
+
+
+/* CSS Responsivo */
+@media (min-width: 768px) {  /* a partir de: 768px */
+    #header {
+        position: fixed;
+        border-bottom: 1px solid #f3f3f3;
+    }
+}
+
+
