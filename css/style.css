@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,11 +21,29 @@ i {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: #533535;
+    background: #222;
     padding: 8px 16px;
     z-index: 2;
 }
 
-.menu {
+.menu { 
+    display: flex;
+    align-items: center;
+    background: #222; /* cor fundo */
+    gap: 25px;
+    list-style: none;
+}
 
+.menu-item {
+    width: 100%;
+}
+
+.menu-link { 
+    display: flex;
+    text-decoration: none;
+}
+
+.menu-texto {
+    font-size: 20px;
+    text-transform: uppercase;
 }
