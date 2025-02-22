@@ -65,6 +65,10 @@ html[data-theme='light'] .logo {
     filter: invert(1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--bg-body); /* cor fundo */
     color: var(--cor-texto);  /* cor texto */
@@ -75,6 +79,13 @@ h1 {
     font-weight: 200;
     font-family: "Atkinson Hyperlegible Next", serif;
     letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Roboto", serif;
+    text-align: center;
 }
 
 b {
@@ -190,12 +201,6 @@ i {
     gap: 25px;
 }
 
-/* ATUALIZAÇOES FUTURAS */
-#home {
-    padding: 32px 16px;
-}
-
-
 /* btn */
 .btn {
     display: flex;
@@ -237,11 +242,92 @@ a {
     text-decoration: none;
 }
 
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+/* ATUALIZAÇOES FUTURAS */
+#home, 
+.projetos, 
+.sobre, 
+.contato {
+    padding: 32px 16px;
+}
+
+
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projeto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgb(234, 234, 234);
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.card-title { 
+    font-family: "Roboto", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card-description {
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.card-lista {  
+    /* UL */
+    list-style: none;
+}
+
+.icone-seta {
+    color: cyan;
+    font-size: 14px;
+}
+
+.card-item {  
+    /* Li */
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+
 /* CSS Responsivo */
 @media (min-width: 768px) {  /* a partir de: 768px */
     #header {
         position: fixed;
-        border-bottom: 1px solid #f3f3f3;
+        border-bottom: 1px solid var(--cor-borda);
         padding: 16px 80px;
         background: var(--bg-header);
     }
@@ -260,6 +346,19 @@ a {
         align-items: flex-start;
     }
 }
+
+/* 992px */
+@media (min-width: 992px) {
+    
+    .projeto-card {
+        flex-direction: row;
+    }
+    .card-img {
+        width: 55%;
+    }
+
+}
+
 
 /* 1200px */
 @media (min-width: 1200px) {
