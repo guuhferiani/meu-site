@@ -17,6 +17,7 @@
 :root[data-theme="dark"] {
 
     --bg-body: #222;
+    --secondary-bg-body: #656565;
     --cor-texto: #eee;
 
     --bg-header: #222;
@@ -37,6 +38,7 @@
 :root[data-theme="light"] {
 
     --bg-body: #dfdfdf;
+    --secondary-bg-body: #9f9f9f;
     --cor-texto: #222;
 
     --bg-header: #dfdfdf;
@@ -86,6 +88,30 @@ h2 {
     font-weight: 600;
     font-family: "Roboto", serif;
     text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Roboto", serif;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: "Atkinson Hyperlegible Next", serif;
+    font-weight: 300;
+    text-align: left;
+}
+
+p, span, li {
+    font-size: 16px;
+}
+
+p {
+    text-align: justify;
 }
 
 b {
@@ -118,6 +144,7 @@ i {
     align-items: center;
     gap: 25px;
     list-style: none;
+    background: var(--bg-body);
 }
 
 .menu-mobile {  /* < nav > */
@@ -135,10 +162,12 @@ i {
 .menu-link { 
     display: flex;
     text-decoration: none;
+    gap: 5px;
+    align-items: center;
 }
 
 .menu-texto {
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
@@ -162,11 +191,6 @@ i {
     color: var(--texto-opaco);
     font-weight: 400;
 }
-
-/* .menu-link .menu-texto:hover,
-.menu-link .menu-icone:hover {
-    font-size: 22px;
-} */
 
 .menu-icone {
     font-size: 25px;
@@ -252,7 +276,7 @@ a {
 .projetos, 
 .sobre, 
 .contato {
-    padding: 32px 16px;
+    padding: 40px 16px;
 }
 
 
@@ -396,6 +420,44 @@ a {
     transition: ease-in-out .3s;
 }
 
+.accordion-header span {
+    color: var(--cor-texto);
+    text-transform: uppercase;
+}
+
+.accordion-body {
+    display: none;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--cor-borda);
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-body);
+}
+
+.accordion-item.active .accordion-header span {
+    color: var(--cor-texto);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
+.accordion-header.start {
+    border-radius: 5px 5px 0 0;
+}
+
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0 0 5px 5px;
+}
 
 
 /* CSS Responsivo */
@@ -412,9 +474,12 @@ a {
     .header-nav {
         display: flex;
     }
-    #home {
+    #home,
+    .projetos,
+    .sobre {
         padding: 128px 96px 64px 96px; /* VOLTAR AQUI */
     }
+    
     .main-content {
         display: flex;
         flex-direction: column;
@@ -437,6 +502,11 @@ a {
     .card-img {
         width: 55%;
     }
+
+    .sobre {
+        gap: 10px;
+    }
+
     .sobre-content1,
     .sobre-content2 {
         display: grid;
@@ -445,11 +515,24 @@ a {
         gap: 64px;
     }
 
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button {
+        justify-content: flex-start;
+    }
 }
 
 
 /* 1200px */
 @media (min-width: 1200px) {
+    h2 {
+        font-size: 65px;
+    }
+    h3 {
+        font-size: 50px;
+    }
+
     #home {
         padding: 160px 96px 32px;
     }
@@ -458,11 +541,24 @@ a {
         width: auto;
     }
 
+    p, span, li {
+        font-size: 20px;
+    }
 }
 
 
 @media (min-width: 1400px) {
-    /* #header {
-        padding: 192px 240px 64px;
-    } */
+    h1 {
+        font-size: 100px;
+    }
+    h2{
+        font-size: 70px;
+    }
+    h3 {
+        font-size: 55px;
+    }
+    .projetos,
+    .sobre{ 
+        padding: 160px 240px 64px;
+    }
 }
