@@ -61,6 +61,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+/*     vertical-align: baseline;
+    scrollbar-width: thin;
+    scrollbar-color: var(--btn) transparent; */
 }
 
 html[data-theme='light'] .logo {
