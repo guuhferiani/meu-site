@@ -17,7 +17,7 @@
 :root[data-theme="dark"] {
 
     --bg-body: #222;
-    --secondary-bg-body: #656565;
+    --secondary-bg-body: #3b3b3b;
     --cor-texto: #eee;
 
     --bg-header: #222;
@@ -61,9 +61,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-/*     vertical-align: baseline;
     scrollbar-width: thin;
-    scrollbar-color: var(--btn) transparent; */
+    scrollbar-color: var(--secondary-bg-body) transparent;
 }
 
 html[data-theme='light'] .logo {
@@ -109,6 +108,16 @@ h4 {
     text-align: left;
 }
 
+a {
+    text-decoration: none;
+    color: var(--cor-txt-menu);
+    font-family: "Roboto", serif;
+}
+
+a:hover {
+    color: var(--texto-opaco);
+}
+
 p, span, li {
     font-size: 16px;
 }
@@ -142,6 +151,12 @@ i {
     height: 3.5rem;
 }
 
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+} 
+
+
 .menu { 
     display: flex;
     align-items: center;
@@ -171,7 +186,7 @@ i {
 }
 
 .menu-texto {
-    font-size: 16px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -469,6 +484,51 @@ a {
 }
 
 
+/* Contato */
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.contato p {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Roboto", serif;
+    text-transform: uppercase;
+}
+
+.contato .email {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Roboto", serif;
+}
+
+/* Roda Pé = footer */ 
+
+footer {
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+}
+
+footer a {
+    color: var(--cor-txt-menu);
+}   
+
+footer a:hover {
+    color: #0477db;
+}
+
 /* CSS Responsivo */
 @media (min-width: 768px) {  /* a partir de: 768px */
     #header {
@@ -493,6 +553,18 @@ a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .contato {
+        padding: 90px;
+    }
+
+    .contato p {
+        width: 80%;
+    }
+
+    footer {
+        margin: 0;
     }
 }
 
