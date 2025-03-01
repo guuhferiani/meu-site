@@ -131,7 +131,7 @@ i {
     width: 100%;
     /* background: var(--bg-header); */
     padding: 8px 16px;
-    z-index: 2;
+    z-index: 999999;
 }
 
 .header-logo .logo {
@@ -153,6 +153,7 @@ i {
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--cor-borda);
+    z-index: 9999;
 }
 
 .menu-item {
@@ -359,6 +360,7 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 32px;
+    margin-bottom: 80px;
 }
 
 .sobre-perfil {
@@ -403,6 +405,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.row2 .sobre-lista {
+    margin-left: 16px;
 }
 
 /* Accordions */
@@ -562,3 +568,70 @@ a {
         padding: 160px 240px 64px;
     }
 }
+
+/* Estilização do Carrossel */
+.carousel {
+    width: 80%; /* Ajustável conforme o layout */
+    max-width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Oculta os radio buttons */
+input { display: none; }
+
+/* Muda o slide com os radio buttons */
+#slide1:checked ~ .slides { transform: translateX(0); }
+#slide2:checked ~ .slides { transform: translateX(-33.33%); }
+#slide3:checked ~ .slides { transform: translateX(-66.66%); }
+
+/* Botões de navegação */
+.navigation {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color, #fff);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.navigation label:hover, 
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background: var(--accent-color, #f00);
+    opacity: 1;
+}
+
+/*  */
