@@ -322,6 +322,80 @@ a {
 }
 
 /* sobre */
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sobre-content1,
+.sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.sobre-perfil {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid var(--cor-borda);
+    object-fit: cover;
+    object-position: center;
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sobre-skills,
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-skills i,
+.sobre-icones i {
+    font-size: 20px;
+    color: rgb(4, 155, 220);
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 32px;
+}
+
+.sobre-content2 .col1 .row1, 
+.sobre-content2 .col1 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Accordions */
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--cor-borda);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
 
 
 /* CSS Responsivo */
@@ -363,6 +437,13 @@ a {
     .card-img {
         width: 55%;
     }
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 32% 60%;
+        justify-content: flex-start;
+        gap: 64px;
+    }
 
 }
 
@@ -372,7 +453,14 @@ a {
     #home {
         padding: 160px 96px 32px;
     }
+
+    .descricao-button .btn {
+        width: auto;
+    }
+
 }
+
+
 @media (min-width: 1400px) {
     /* #header {
         padding: 192px 240px 64px;
