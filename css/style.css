@@ -23,7 +23,9 @@
     --bg-header: #222;
     --icone-tema: #eeeeee;
 
-    --cor-borda: #eee;
+    --cor-borda: #28292E;
+    --cor-borda-secundaria: #56575A;
+   
 
     --cor-txt-menu: #eee;
     --txt-menu-hover: #eee;
@@ -44,7 +46,8 @@
     --bg-header: #dfdfdf;
     --icone-tema: #222;
 
-    --cor-borda: #222;
+    --cor-borda: #C7C8C9;
+    --cor-borda-secundaria: #9A9A9C;
 
     --cor-txt-menu: #222;
     --txt-menu-hover: #222;
@@ -156,6 +159,13 @@ i {
     justify-content: flex-end;
 } 
 
+#toggleTheme {
+    font-size: 20px;
+    color: var(--icone-tema);
+    /* color: red; */
+    cursor: pointer;
+    transition: ease-in-out .6s;
+}
 
 .menu { 
     display: flex;
@@ -193,7 +203,7 @@ i {
 .menu-mobile .menu-link {
     flex-direction: column;
     justify-content: center;
-    padding: 7px 15px;
+    padding: 8px 16px;
 }
 
 .menu-link.active .menu-icone,
@@ -201,7 +211,7 @@ i {
 .menu-link:hover .menu-icone,
 .menu-link:hover .menu-texto{
     color: var(--txt-menu-hover);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* não selecionados */
@@ -223,13 +233,7 @@ i {
     display: none;
 }
 
-#toggleTheme {
-    font-size: 20px;
-    color: var(--icone-tema);
-    /* color: red; */
-    cursor: pointer;
-    transition: ease-in-out .6s;
-}
+
 
 /* Home */
 #home {
@@ -446,7 +450,7 @@ a {
 
 .accordion-header span {
     color: var(--cor-texto);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .accordion-body {
@@ -519,12 +523,14 @@ footer p {
     font-size: 16px;
     text-align: center;
     padding: 16px;
+    font-family: "Roboto", serif;
 }
 
 footer a {
     color: var(--cor-txt-menu);
 }   
 
+footer i:hover,
 footer a:hover {
     color: #0477db;
 }
@@ -540,13 +546,20 @@ footer a:hover {
     .nav-mobile {
         display: none;
     }
-    .header-nav {
+    .header-nav { 
         display: flex;
     }
+
+    /* ATT */
+    /* .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    } */
+
     #home,
     .projetos,
     .sobre {
-        padding: 128px 96px 64px 96px; /* VOLTAR AQUI */
+        padding: 128px 96px 64px 96px;
     }
     
     .main-content {
@@ -643,6 +656,7 @@ footer a:hover {
         padding: 160px 240px 64px;
     }
 }
+
 
 /* Estilização do Carrossel */
 .carousel {
