@@ -31,3 +31,31 @@ menuLinks.forEach(item => {
         item.classList.add("active");
     })
 })
+
+
+// Envio do formulário com limpeza dos campos
+const form = document.querySelector(".form-contato");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Impede a atualização da página
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    try {
+        let response = await fetch(action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            alert("Mensagem enviada com sucesso!");
+            form.reset(); // Limpa os campos do formulário
+        } else {
+            alert("Erro ao enviar mensagem. Tente novamente.");
+        }
+    } catch (error) {
+        alert("Erro de conexão. Verifique sua internet.");
+    }
+});
