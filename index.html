@@ -56,6 +56,8 @@
         <!-- trocar cor tema -->
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"></i>
+            <!-- aria-label="Alternar tema" -->
+             <!-- Isso ajuda usuários com leitores de tela a entenderem a funcionalidade do botão. -->
         </div>
 
     </header>
@@ -259,8 +261,31 @@
 
         </div>
 
+        <!-- Fim Projetos -->
+
+        <h2>Galeria</h2>
+
+        <div class="carousel">
+
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
+
+            <div class="slides">
+                <div class="slide"><img src="img/slide1.PNG" alt="Imagem 1"></div>
+                <div class="slide"><img src="img/slide2.PNG" alt="Imagem 2"></div>
+                <div class="slide"><img src="img/slide3.PNG" alt="Imagem 3"></div>
+            </div>
+
+            <div class="navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+
     </section>
-    <!-- Fim Projetos -->
+
 
 
     <section id="sobre" class="sobre">
@@ -445,7 +470,7 @@
         <h2>Contato</h2>
 
         <p>
-            Estou disponível para orientações e novas conexões. 
+            Estou disponível para orientações e novas conexões.
             Contate-me via e-mail e conecte-se comigo através das minhas redes sociais.
         </p>
 
@@ -485,15 +510,18 @@
             </button>
         </a>
 
+
+
     </section>
+
 
     <footer>
         <p>
-            &copy; 2025. Portfolio desenvolvido para fins Educativos com base nas aulas no 
+            &copy; 2025. Portfolio desenvolvido para fins Educativos com base nas aulas no
             <a href="https://sp.senai.br/unidade/leopoldina/" target="_blank">
-                
+
                 Senai Leopoldina - SP</a>.
-             Desenvolvido por <a href="https://github.com/guuhferiani" target="_blank">
+            Desenvolvido por <a href="https://github.com/guuhferiani" target="_blank">
                 <i class="bi bi-github"></i>
                 Gustavo Feriani </a>
         </p>
@@ -501,26 +529,7 @@
 
 
 
-    <!-- <section class="carousel">
-        <div class="carousel">
 
-            <input type="radio" name="carousel" id="slide1" checked>
-            <input type="radio" name="carousel" id="slide2">
-            <input type="radio" name="carousel" id="slide3">
-
-            <div class="slides">
-                <div class="slide"><img src="img/slide1.PNG" alt="Imagem 1"></div>
-                <div class="slide"><img src="img/slide2.PNG" alt="Imagem 2"></div>
-                <div class="slide"><img src="img/slide3.PNG" alt="Imagem 3"></div>
-            </div>
-
-            <div class="navigation">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-            </div>
-        </div>
-    </section> -->
 
     <script src="js/script.js"> </script>
 
