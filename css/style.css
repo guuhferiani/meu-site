@@ -181,7 +181,7 @@ i {
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--cor-borda);
-    z-index: 9999;
+    z-index: 1;
 }
 
 .menu-item {
@@ -277,8 +277,8 @@ i {
 }
 
 .btn:hover{
-    transform: scale(1.01);
-    transition: ease-in-out .4s;
+    transform: scale(1.02);
+    transition: ease-out .4s;
 }
 
 .btn:hover span {
@@ -505,6 +505,7 @@ a {
     font-size: 20px;
     font-family: "Roboto", serif;
     text-transform: uppercase;
+    margin-top: 50px;
 }
 
 .contato .email {
@@ -512,6 +513,71 @@ a {
     font-size: 20px;
     font-family: "Roboto", serif;
 }
+
+/* Forms */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--secondary-bg-body);
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-contato label {
+    font-weight: bold;
+    color: var(--cor-texto);
+    font-size: 16px;
+    font-family: "Roboto", serif;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    background: var(--bg-body);
+    color: var(--cor-texto);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: var(--hover);
+    box-shadow: 0 0 5px var(--hover);
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-contato button {
+    background: var(--btn);
+    color: var(--bg-body);
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-contato button:hover {
+    background: var(--hover);
+    transform: scale(1.05);
+}
+
+
 
 /* Roda Pé = footer */ 
 
@@ -604,7 +670,7 @@ footer a:hover {
     .sobre-content1,
     .sobre-content2 {
         display: grid;
-        grid-template-columns: 32% 60%;
+        grid-template-columns: 40% 60%;
         justify-content: flex-start;
         gap: 64px;
     }
@@ -612,6 +678,7 @@ footer a:hover {
     .sobre-descricao h2 {
         text-align: left;
     }
+    
     .descricao-button {
         justify-content: flex-start;
     }
@@ -694,7 +761,9 @@ footer a:hover {
 }
 
 /* Oculta os radio buttons */
-input { display: none; }
+.carousel input { 
+    display: none; 
+}
 
 /* Muda o slide com os radio buttons */
 #slide1:checked ~ .slides { transform: translateX(0); }

@@ -57,8 +57,10 @@
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"></i>
             <!-- aria-label="Alternar tema" -->
-             <!-- Isso ajuda usuários com leitores de tela a entenderem a funcionalidade do botão. -->
+            <!-- Isso ajuda usuários com leitores de tela a entenderem a funcionalidade do botão. -->
         </div>
+
+
 
     </header>
     <!-- FIM MENU DESKTOP -->
@@ -108,8 +110,7 @@
     <main id="home">
         <div class="main-content">
 
-            <h1>
-                <b> Soluções Digitais & </b>
+            <h1> <b> Soluções Digitais & </b>
                 Desenvolvimento Front-End.
 
                 <p>
@@ -511,6 +512,21 @@
         </a>
 
 
+        <p>Entre em contato preenchendo o formulário abaixo.</p>
+
+        <form action="https://formspree.io/f/SEU_FORM_ID" method="POST" class="form-contato">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
 
     </section>
 
@@ -526,9 +542,6 @@
                 Gustavo Feriani </a>
         </p>
     </footer>
-
-
-
 
 
     <script src="js/script.js"> </script>
