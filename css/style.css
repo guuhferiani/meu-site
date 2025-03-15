@@ -523,6 +523,53 @@ a {
 
 /* Forms */
 
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #9A9A9C;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.form-contato label {
+    font-weight: bold;
+    color: #222;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--cor-borda-secundaria);
+    border-radius: 6px;
+    color: var(--cor-texto);
+    background: var(--bg-body);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: var(--cor-texto);
+    box-shadow: 0 0 5px #3b3b3b;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+
+
 
 
 /* Roda Pé = footer */
@@ -619,6 +666,7 @@ footer a:hover {
     background: orange;
     opacity: 1;
 }
+
 
 
 /* Fim CSS Carousel */
