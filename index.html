@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="Gustavo Feriani, Feriani, Gustavo, dev, desenvolvedor, projetos, contato">
+    <meta name="description" content="Soluções Digitais e Desenvolvimento Front-End.">
+    <meta name="robots" content="index, follow">
+
     <title>Gustavo Feriani | Portfólio</title>
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -14,6 +21,8 @@
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -51,7 +60,7 @@
         <!-- logo -->
         <div class="header-logo">
             <a href="#home">
-                <img src="img/logoB.png" alt="" class="logo">
+                <img src="img/logoB.png" alt="" class="logo" data-aos="zoom-in" data-aos-delay="100">
             </a>
         </div>
 
@@ -112,16 +121,16 @@
     <main id="home">
         <div class="main-content">
 
-            <h1> <b> Soluções Digitais & </b>
+            <h1 data-aos="zoom-in" data-aos-delay="500"> <b> Soluções Digitais & </b>
                 Desenvolvimento Front-End.
 
-                <p>
+                <p data-aos="zoom-out" data-aos-delay="600">
                     Gustavo Feriani - SP, Desenvolvedor e Instrutor Front-End.
                 </p>
             </h1> <!-- slogan -->
 
             <!-- Redes Sociais -->
-            <ul class="menu menu-social">
+            <ul class="menu menu-social" data-aos="fade-up" data-aos-delay="900">
 
                 <li>
                     <a href="https://github.com/guuhferiani" class="" target="_blank">
@@ -152,7 +161,7 @@
             </ul>
 
             <!-- botao externo -->
-            <a href="#projetos">
+            <a href="#projetos" data-aos="fade-up" data-aos-delay="1000">
                 <button class="btn btn-primary">
                     <span> Ver Projetos </span>
                     <i class="bi bi-arrow-down-right"> </i>
@@ -161,7 +170,7 @@
 
         </div> <!-- main-content -->
 
-        <div class="video">
+        <div class="video" data-aos="fade-up" data-aos-delay="1000">
 
             <iframe src="https://www.youtube.com/embed/5nEyjYn9_LI?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H"
                 title="HACKING GOOGLE: Series Trailer (:30)" frameborder="0"
@@ -578,6 +587,13 @@
 
 
     <script src="js/script.js"> </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- <script>
+        AOS.init();
+      </script> -->
 
 </body>
 

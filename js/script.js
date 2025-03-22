@@ -30,32 +30,45 @@ menuLinks.forEach(item => {
         menuLinks.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
     })
-})
+}) 
 
+// Envio do Formulário com Limpeza dos Campos
 
-// Envio do formulário com limpeza dos campos
 const form = document.querySelector(".form-contato");
 
 form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Impede a atualização da página
+    event.preventDefault(); //Impede a Atualização da Página.
 
     const formData = new FormData(form);
     const action = form.getAttribute("action");
-
+    
     try {
         let response = await fetch(action, {
             method: "POST",
             body: formData,
-            headers: { "Accept": "application/json" }
+            headers: {"Accept": "application/json"}
         });
 
         if (response.ok) {
-            alert("Mensagem enviada com sucesso!");
-            form.reset(); // Limpa os campos do formulário
-        } else {
-            alert("Erro ao enviar mensagem. Tente novamente.");
+            alert("Mensagem enviada com Sucesso!");
+            form.reset(); //Limpa os camps do Form
+        }   else {
+            alert("Erro ao enviar a mensagem. Tente novamente.");
         }
+
     } catch (error) {
         alert("Erro de conexão. Verifique sua internet.");
     }
+
+});
+
+/** * Animation on scroll */ 
+
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: false,
+    })
 });
